@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalCampus - Student Companion App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#FFF9F5] text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-100 sticky top-0 z-50 py-4 px-6">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-[#1B4D3E] flex items-center justify-center text-white font-bold text-lg">GC</div>
+                <span class="text-xl font-bold tracking-tight text-[#1B4D3E]">Global<span class="text-[#C86D63]">Campus</span></span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
+                <a href="#features" class="hover:text-[#1B4D3E] transition">Features</a>
+                <a href="https://github.com/Sukhreet-kaur/HostelFix-Live.git" target="_blank" class="hover:text-[#1B4D3E] transition">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="max-w-6xl mx-auto px-6 py-16 md:py-24 flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="inline-block bg-rose-100 text-[#C86D63] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">Android Mobile App</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                    Your Ultimate Student Companion & Guide
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                    GlobalCampus is a modern Android application built to make university life seamless. Featuring 24/7 AI assistance, visa support, accommodation guides, and a vibrant student community.
+                </p>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://github.com/Sukhreet-kaur/HostelFix-Live.git" target="_blank" class="bg-[#1B4D3E] hover:bg-[#143a2f] text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition flex items-center space-x-2">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span>View GitHub</span>
+                    </a>
+                    
+                    <button onclick="showModal()" class="bg-[#C86D63] hover:bg-[#b05b52] text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition flex items-center space-x-2">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.492 1.492 0 01-.61-1.201V3.015c0-.472.221-.916.609-1.201zM15.208 13.415l2.052 2.053-10.84 6.262a1.5 1.5 0 01-1.503 0l10.291-8.315zm0-2.83L4.916 2.27a1.5 1.5 0 011.503 0l10.84 6.262-2.051 2.053zM18.847 15.06l2.36 1.363a1.5 1.5 0 010 2.597l-2.36 1.363-2.052-2.053 2.052-2.053c0-.001 0-.001 0-.001z"/></svg>
+                        <span>Play Store</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Highlights Card -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 rounded-2xl bg-[#1B4D3E]/10 flex items-center justify-center text-[#1B4D3E] font-bold text-2xl">🎓</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg">GlobalCampus Ecosystem</h3>
+                        <p class="text-slate-500 text-sm">Powered by Kotlin & Firebase</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-4 rounded-xl bg-[#FFF9F5] border border-slate-100 flex items-center justify-between">
+                        <span class="font-semibold text-slate-700 text-sm">🤖 24/7 AI Campus Assistant</span>
+                        <span class="text-xs bg-[#1B4D3E]/10 text-[#1B4D3E] px-2.5 py-1 rounded-full font-medium">Gemini API</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#FFF9F5] border border-slate-100 flex items-center justify-between">
+                        <span class="font-semibold text-slate-700 text-sm">💬 Real-time Student Community</span>
+                        <span class="text-xs bg-[#C86D63]/10 text-[#C86D63] px-2.5 py-1 rounded-full font-medium">Firebase DB</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#FFF9F5] border border-slate-100 flex items-center justify-between">
+                        <span class="font-semibold text-slate-700 text-sm">🏡 Visa & Accommodation Guides</span>
+                        <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-medium">Jetpack Compose</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section id="features" class="mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Core Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="text-2xl mb-3">🤖</div>
+                    <h3 class="font-bold text-slate-900 mb-2">AI Chat Assistant</h3>
+                    <p class="text-slate-600 text-sm">Instant answers to student questions regarding campus life, hostels, and services using Google Gemini.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="text-2xl mb-3">💬</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Community Feed</h3>
+                    <p class="text-slate-600 text-sm">Real-time posts and comments allowing students to connect, share updates, and discuss campus topics.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="text-2xl mb-3">🔒</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Secure Authentication</h3>
+                    <p class="text-slate-600 text-sm">Email/password authentication powered by Firebase Auth with persistent session management.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 GlobalCampus. Built with passion for students.</p>
+    </footer>
+
+    <!-- Play Store Modal Popup -->
+    <div id="playStoreModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl text-center transform transition-all">
+            <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🚧</div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Work in Progress</h3>
+            <p class="text-slate-600 text-sm mb-6">Will be live soon under closed testing on the Google Play Store!</p>
+            <button onclick="hideModal()" class="w-full bg-[#1B4D3E] hover:bg-[#143a2f] text-white font-semibold py-3 rounded-xl transition">Got it</button>
+        </div>
+    </div>
+
+    <script>
+        function showModal() {
+            const modal = document.getElementById('playStoreModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        function hideModal() {
+            const modal = document.getElementById('playStoreModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
